@@ -1,0 +1,30 @@
+# Compiler output
+out/
+cache/
+
+# Dependencies (installed via forge install)
+lib/
+
+# Environment files
+.env
+.env.*
+*.env
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Broadcast files (may contain sensitive deployment data)
+broadcast/
+
+# Node
+node_modules/
