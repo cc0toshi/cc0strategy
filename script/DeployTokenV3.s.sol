@@ -67,10 +67,10 @@ contract DeployTokenV3 is Script {
             tokenAdmin: deployer
         });
         
-        // 1% fees
+        // 6.9% fees
         PoolStaticConfigVars memory feeConfig = PoolStaticConfigVars({
-            clankerFee: 10000,
-            pairedFee: 10000
+            clankerFee: 69000,
+            pairedFee: 69000
         });
         
         config.poolConfig = IClanker.PoolConfig({
