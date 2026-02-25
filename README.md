@@ -4,11 +4,11 @@ NFT-linked token protocol built on Uniswap V4. Deploy tokens that distribute tra
 
 ## Overview
 
-cc0strategy enables anyone to launch a token linked to an existing NFT collection. 1% of all trading fees are automatically distributed to NFT holders.
+cc0strategy enables anyone to launch a token linked to an existing NFT collection. 6.9% of all trading fees are captured, with 80% (5.52%) distributed to NFT holders.
 
 **Key Features:**
 - Launch tokens linked to any ERC-721 collection
-- 1% trading fee on all swaps
+- 6.9% trading fee on all swaps
 - 80% of fees distributed to NFT holders
 - 20% of fees to treasury
 - MEV protection via block delay
@@ -27,7 +27,7 @@ cc0strategy enables anyone to launch a token linked to an existing NFT collectio
 │                                                                 │
 │  ┌─────────────┐    ┌─────────────┐    ┌─────────────────────┐ │
 │  │ ClankerHook │───▶│  LpLocker   │───▶│   FeeDistributor    │ │
-│  │  (1% fee)   │    │(collect LP) │    │ (split to NFT/trea) │ │
+│  │ (6.9% fee)  │    │(collect LP) │    │ (split to NFT/trea) │ │
 │  └─────────────┘    └─────────────┘    └─────────────────────┘ │
 │         │                                        │              │
 │         ▼                                        ▼              │
@@ -40,14 +40,14 @@ cc0strategy enables anyone to launch a token linked to an existing NFT collectio
 
 ## Fee Structure
 
-Every swap incurs a **1% LP fee**, distributed as follows:
+Every swap incurs a **6.9% LP fee**, distributed as follows:
 
 ```
-1% swap fee
+6.9% swap fee
     │
-    ├── 0.2% → Factory (team) - claimed via Factory.claimTeamFees()
+    ├── 1.38% → Factory (team) - claimed via Factory.claimTeamFees()
     │
-    └── 0.8% → LpLocker → FeeDistributor
+    └── 5.52% → LpLocker → FeeDistributor
                               │
                               └── 100% → NFT Holders (equal per NFT)
 ```
