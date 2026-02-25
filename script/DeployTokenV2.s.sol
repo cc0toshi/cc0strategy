@@ -74,10 +74,10 @@ contract DeployTokenV2 is Script {
             tokenAdmin: deployer
         });
         
-        // Fee config: 1% fee on both directions
+        // Fee config: 6.9% fee on both directions
         PoolStaticConfigVars memory feeConfig = PoolStaticConfigVars({
-            clankerFee: 10000, // 1%
-            pairedFee: 10000   // 1%
+            clankerFee: 69000, // 6.9%
+            pairedFee: 69000   // 6.9%
         });
         
         // Pool config
