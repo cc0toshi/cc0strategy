@@ -196,15 +196,15 @@ contract IntegrationTest is Script {
             originatingChainId: block.chainid
         });
         
-        // Standard pool config: pair with WETH, 1% fee
+        // Standard pool config: pair with WETH, 6.9% fee
         IClanker.PoolConfig memory poolConfig = IClanker.PoolConfig({
             pairedToken: WETH,
             tickIfToken0IsClanker: -207240, // ~$0.00001 starting price
             tickSpacing: 200,
             hook: hook,
             poolData: abi.encode(IClankerHookStaticFee.PoolStaticConfigVars({
-                clankerFee: 10000, // 1%
-                pairedFee: 10000   // 1%
+                clankerFee: 69000, // 6.9%
+                pairedFee: 69000   // 6.9%
             }))
         });
         
