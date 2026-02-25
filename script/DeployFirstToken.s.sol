@@ -61,10 +61,10 @@ contract DeployFirstToken is Script {
             tokenAdmin: deployer
         });
         
-        // Fee config: 1% fee on both directions (10000 = 1%)
+        // Fee config: 6.9% fee on both directions (69000 = 6.9%)
         PoolStaticConfigVars memory feeConfig = PoolStaticConfigVars({
-            clankerFee: 10000, // 1%
-            pairedFee: 10000   // 1%
+            clankerFee: 69000, // 6.9%
+            pairedFee: 69000   // 6.9%
         });
         
         // Pool config with encoded fee data
@@ -99,7 +99,7 @@ contract DeployFirstToken is Script {
         // NFT collection for fee distribution
         config.nftCollection = NFT_COLLECTION;
         
-        console2.log("Deploying token with 1% fees...");
+        console2.log("Deploying token with 6.9% fees...");
         address token = factory.deployToken(config);
         
         console2.log("Token deployed:", token);
